@@ -1,8 +1,7 @@
 package org.example.chapter19
 
 import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.*
 
 fun userFlow(): Flow<String> = flow {
     repeat(3) {
@@ -29,4 +28,14 @@ suspend fun main() {
         }
     }
 
+    flow {
+        emit("Message 1")
+    }
+        .onEach { println(it) }
+        .onStart { println("Do something before") }
+        .onCompletion { println("Do something after") }
+        .catch { emit("Error") }
+        .collect {
+            println("Collected $it")
+        }
 }
