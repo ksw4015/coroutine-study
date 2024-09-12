@@ -3,5 +3,7 @@
 2) 안드로이드의 MVVM, MVI 등의 패턴에서 Coroutine의 Flow(StateFlow, SharedFlow 등)를 거의 필수로 사용
 3) Compose에서도 Coroutine을 이용하여 처리하는 상황이 종종 있음
 
+<br>
+
 # 2. 책 소개
 [코틀린 코루틴 : 딥다이브](https://product.kyobobook.co.kr/detail/S000210537188)
